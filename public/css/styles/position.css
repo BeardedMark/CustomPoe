@@ -1,0 +1,107 @@
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.pos-rel{
+    position: relative;
+}
+
+.pos-abs{
+    position: absolute;
+}
+
+.pos-fixed{
+    position: fixed;
+}
+.pos-fluid{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.pos-abs-fill{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.z-0{
+    z-index: 0;
+}
+.z-1{
+    z-index: 1;
+}
+.z-2{
+    z-index: 2;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.h-min-100 {
+    min-height: 100%;
+}
+.h-max-100 {
+    max-height: 100%;
+}
+
+.h-max-610 {
+    max-height: 610px;
+}
+.h-max-377 {
+    max-height: 377px;
+}
+.h-max-233 {
+    max-height: 233px;
+}
+.h-max-144 {
+    max-height: 144px;
+}
+.h-max-98 {
+    max-height: 98px;
+}
+
+.h-max-55 {
+    max-height: 55px;
+}
+.h-max-34 {
+    max-height: 55px;
+}
+
+.w-max-98 {
+    max-width: 98px;
+}
+
+.w-max-144 {
+    max-width: 144px;
+}
+.w-max-100 {
+    max-width: 100%;
+}
+
+.ratio-16-9 {
+    aspect-ratio: 16/9;
+}
+
+.ratio-rect {
+    aspect-ratio: 1/1;
+}

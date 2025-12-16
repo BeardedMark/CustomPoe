@@ -1,0 +1,14 @@
+.back-color-basic {
+    background-color: var(--basic);
+}
+.back-color-second {
+    background-color: var(--second);
+}
+.back-color-dark {
+    background-color: var(--dark);
+}
+
+.hover-back-color-other:hover,
+.back-color-other {
+    background-color: var(--other);
+}

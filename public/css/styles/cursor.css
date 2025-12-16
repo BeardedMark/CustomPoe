@@ -1,0 +1,41 @@
+.cursor-def{
+    cursor: default;
+}
+.cursor-text{
+    cursor: text;
+}
+.cursor-grab{
+    cursor: grab;
+}
+.cursor-move{
+    cursor: move;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.cursor-help{
+    cursor: help;
+}
+.cursor-alias{
+    cursor: alias;
+}
+.cursor-zoom-in{
+    cursor: zoom-in;
+}
+.cursor-no-drop{
+    cursor: no-drop;
+}
+.cursor-no-select{
+    user-select: none;
+}
+.cursor-no-events{
+    pointer-events: none;
+}
+.cursor-lock{
+    cursor: no-drop;
+    user-select: none;
+    pointer-events: none;
+}
+.cursor-select-no{
+    user-select: none;
+}

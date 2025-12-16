@@ -1,0 +1,104 @@
+/* align */
+
+.font-start {
+    text-align: start;
+}
+
+.font-center {
+    text-align: center;
+}
+
+.font-end {
+    text-align: end;
+}
+
+/* size */
+
+.font-size-h1 {
+    font-size: 36px;
+}
+
+.font-size-h2 {
+    font-size: 30px;
+}
+
+.font-size-h3 {
+    font-size: 24px;
+}
+
+.font-size-lg {
+    font-size: 20px;
+}
+
+.font-size-md {
+    font-size: 16px;
+}
+
+.font-size-sm {
+    font-size: 12px;
+}
+
+/* style */
+
+.font-style-strike {
+    text-decoration: line-through;
+}
+
+.font-style-underline {
+    text-decoration: underline;
+}
+
+.font-style-dashed {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+.font-style-dotted {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+/* color */
+
+.font-color-second {
+    color: var(--second);
+}
+
+.font-color-accent {
+    color: var(--accent);
+}
+
+.font-color-other {
+    color: var(--other);
+}
+
+.font-color-danger {
+    color: var(--danger);
+}
+
+.font-color-warning {
+    color: var(--warning);
+}
+
+.font-color-success {
+    color: var(--success);
+}
+
+.font-color-info {
+    color: var(--info);
+}
+
+.hover-font-color-contrast:hover,
+.font-color-contrast {
+    color: var(--contrast);
+}
+.font-indent-21{
+    text-indent: 21px;
+}
+.font-indent-34{
+    text-indent: 34px;
+}

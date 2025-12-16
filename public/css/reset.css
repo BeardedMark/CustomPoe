@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Обнуление маргинов и отступов */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+ul,
+ol,
+li {
+    margin: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* Обнуление границ */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Обнуление стилей списков */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Обнуление стилей ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Обнуление стилей формы */
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+
+/* Обнуление стилей заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Обнуление стилей изображений */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Обнуление стилей кнопок */
+button,
+a {
+    cursor: pointer;
+}
+
+/* Обнуление стилей полей ввода */
+input,
+select,
+textarea {
+    appearance: none;
+}
+
+/* Обнуление стилей текстовых полей ввода */
+input,
+textarea {
+    border-radius: 0;
+}
+
+/* Обнуление стилей списков */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Обнуление стилей курсора */
+/* button,
+input,
+select,
+textarea {
+    cursor: pointer;
+} */

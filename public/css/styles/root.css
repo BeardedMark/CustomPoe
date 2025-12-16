@@ -1,0 +1,92 @@
+:root {
+    --accent: #cec59f;
+    --contrast: #A38B63;
+    --second: #5b554f;
+    --other: #292929;
+    --basic: #191919;
+    --dark: #131313;
+    --success: #7DA226;
+    --warning: #D99F15;
+    --danger: #C34343;
+    --info: #2A7DBE;
+
+    --size-1: 1px;
+    --size-2: 2px;
+    --size-3: 3px;
+    --size-5: 5px;
+    --size-8: 8px;
+    --size-13: 13px;
+    --size-21: 21px;
+    --size-34: 34px;
+    --size-55: 55px;
+    --size-98: 98px;
+    --size-144: 144px;
+    --size-233: 233px;
+}
+
+:root {
+    --color-normal-item: rgb(200, 200, 200);
+    --color-magic-item: rgb(136, 136, 255);
+    --color-rare-item: rgb(255, 255, 119);
+    --color-unique-item: rgb(175, 96, 37);
+
+    --color-skill-gem: rgb(27, 162, 155);
+    --color-currency: rgb(170, 158, 130);
+    --color-quest-item: rgb(74, 230, 58);
+    --color-divination-card: rgb(14, 186, 255);
+
+    --color-default-text: rgb(127, 127, 127);
+    --color-value-text: rgb(255, 255, 255);
+    --color-augmented-value-text: rgb(136, 136, 255);
+    --color-crafted-mod: rgb(184, 218, 242);
+    --color-corrupted: rgb(210, 0, 0);
+
+    --color-fire-damage: rgb(150, 0, 0);
+    --color-cold-damage: rgb(54, 100, 146);
+    --color-lightning-damage: rgb(255, 215, 0);
+    --color-chaos-damage: rgb(208, 32, 144);
+
+    --color-supporter-pack-new-item: rgb(180, 96, 0);
+    --color-supporter-pack-item: rgb(163, 141, 109);
+
+    --color-nemesis-mod: rgb(255, 200, 0);
+    --color-nemesis-mod-outline: rgb(255, 40, 0);
+
+    --color-bloodline-mod: rgb(210, 0, 220);
+    --color-bloodline-mod-outline: rgb(74, 0, 160);
+
+    --color-torment-mod: rgb(50, 230, 100);
+    --color-torment-mod-outline: rgb(0, 100, 150);
+    
+    --color-title: rgb(231, 180, 120);
+    --color-favour: rgb(170, 158, 120);
+    --color-unknown-1: rgb(255, 192, 203);
+    --color-unknown-2: rgb(30, 144, 255);
+    --color-brown-dark: rgb(124, 81, 50);
+    --color-brown-normal: rgb(191, 91, 0);
+    --color-brown-light: rgb(254, 191, 128);
+    --color-purple-dark: rgb(38, 0, 86);
+    --color-purple-normal: rgb(88, 0, 179);
+    --color-purple-light: rgb(192, 128, 254);
+    --color-green-dark: rgb(98, 128, 0);
+    --color-green-normal: rgb(191, 244, 0);
+    --color-green-light: rgb(239, 254, 128);
+    --color-red-dark: rgb(86, 0, 0);
+    --color-red-normal: rgb(191, 0, 0);
+    --color-red-light: rgb(254, 128, 128);
+    --color-blue-dark: rgb(0, 0, 128);
+    --color-blue-normal: rgb(0, 0, 254);
+    --color-blue-light: rgb(128, 179, 254);
+    --color-orange-dark: rgb(254, 170, 0);
+    --color-orange-normal: rgb(254, 213, 0);
+    --color-orange-light: rgb(254, 254, 153);
+    --color-pink-dark: rgb(114, 0, 83);
+    --color-pink-normal: rgb(204, 0, 154);
+    --color-pink-light: rgb(254, 128, 222);
+    --color-green-dark-shades: rgb(0, 73, 0);
+    --color-green-normal-shades: rgb(0, 191, 0);
+    --color-green-light-shades: rgb(128, 254, 128);
+    --color-gray-dark: rgb(42, 42, 42);
+    --color-gray-normal: rgb(135, 135, 135);
+    --color-gray-light: rgb(221, 221, 221);
+}

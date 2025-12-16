@@ -1,0 +1,159 @@
+.details {}
+
+.summary {
+    cursor: pointer;
+    position: relative;
+    /* Для позиционирования псевдоэлемента */
+    padding-left: 21px;
+    /* Для отступа под стрелку */
+    list-style: none;
+    /* Убирает стандартную маркер у summary */
+    user-select: none;
+    /* margin-bottom: 13px; */
+}
+
+.summary::-webkit-details-marker {
+    display: none;
+    /* Убирает стандартную стрелку в WebKit-браузерах */
+}
+
+.summary::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 16px;
+    /* Ширина SVG */
+    height: 16px;
+    /* Высота SVG */
+    background-image: url('../../svg/arrow-small.svg');
+    /* Путь к SVG */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.details[open] summary::before {
+    transform: translateY(-50%) rotate(90deg);
+    /* Поворот стрелки вниз */
+}
+
+.lock,
+.lock-blur,
+.lock-gray {
+    user-select: none;
+    pointer-events: none;
+    cursor: no-drop;
+}
+
+.lock-opacity {
+    filter: blur(2px);
+}
+
+.lock-blur {
+    filter: blur(2px);
+}
+
+.lock-gray {
+    filter: grayscale(1);
+}
+
+.no-select {
+    user-select: none;
+}
+
+
+
+/* Transition */
+
+.trans-fast {
+    transition: .1s;
+}
+
+.trans-normal {
+    transition: .3s;
+}
+
+.trans-slow {
+    transition: .5s;
+}
+
+.hover-target-hide {
+    opacity: 1;
+}
+
+.hover-action:hover .hover-target-hide {
+    opacity: 0;
+}
+
+.hover-target-show {
+    opacity: 0;
+}
+
+.hover-action:hover .hover-target-show {
+    opacity: 1;
+}
+
+.hover-target-scale-1-1 {
+    transform: scale(1);
+}
+
+.hover-scale-1-1:hover,
+.hover-action:hover .hover-target-scale-1-1 {
+    transform: scale(1.1);
+}
+
+.hover-target-undeline {
+    text-decoration: none;
+}
+
+.hover-action:hover .hover-target-undeline {
+    text-decoration: underline;
+}
+
+.hover-shadow:hover,
+.temp-shadow {
+    z-index: 100;
+    box-shadow:
+        0px 2.07px 2.21px 0px rgba(46, 60, 80, 0.01),
+        0px 4.98px 5.32px 0px rgba(46, 60, 80, 0.02),
+        0px 9.39px 10.01px 0px rgba(46, 60, 80, 0.03),
+        0px 16.75px 17.86px 0px rgba(46, 60, 80, 0.04),
+        0px 31.33px 33.42px 0px rgba(46, 60, 80, 0.05),
+        0px 75px 80px 0px rgba(46, 60, 80, 0.07);
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.flip-x{
+    transform: scaleX(-1);
+}
+
+.flip-y{
+    transform: scaleY(-1);
+}
+
+
+.temp-img,
+.temp-img-cover,
+.temp-img-contain,
+.temp-img-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.temp-img-cover {
+    object-fit: cover;
+}
+
+.temp-img-contain {
+    object-fit: contain;
+}
+
+.temp-img-fill {
+    object-fit: fill;
+}

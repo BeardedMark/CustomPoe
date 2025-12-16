@@ -1,0 +1,39 @@
+.border-solid-1 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+}
+
+.hover-border-color-second:hover,
+.border-color-second {
+    border-color: var(--second);
+}
+
+.hover-border-color-accent:hover,
+.border-color-accent {
+    border-color: var(--accent);
+}
+
+.hover-border-color-other:hover,
+.border-color-other {
+    border-color: var(--other);
+}
+
+.hover-border-color-second:hover,
+.border-color-second {
+    border-color: var(--second);
+}
+
+
+.border-r-max {
+    border-radius: 100vmax;
+}
+.border-r-8 {
+    border-radius: 8px;
+}
+
+.border-b-1 {
+    border-style: dashed;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}

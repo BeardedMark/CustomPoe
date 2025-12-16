@@ -1,0 +1,1489 @@
+@font-face {
+    font-family: 'PoeFont';
+    src: url('/fonts/FrizQuadrataC.woff') format('woff'),
+        url('/fonts/FrizQuadrataC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-weight: 300; */
+    font-family: 'PoeFont', sans-serif;
+    font-size: 16px;
+    color: var(--contrast);
+    background-color: var(--basic);
+}
+
+summary,
+img {
+    user-select: none;
+}
+
+a:hover {
+    color: var(--contrast);
+}
+
+select {
+    padding: 13px;
+    border-radius: 8px;
+    background-color: var(--dark);
+    border: solid 1px var(--second);
+
+    color: #333;
+}
+
+select option:checked {
+    background-color: var(--second);
+    /* Цвет фона выделенной опции */
+    color: var(--accent);
+    /* Цвет текста выделенной опции */
+}
+
+select:focus {
+    outline: none;
+    /* Убираем стандартное обводку при фокусе */
+    border-color: #4caf50;
+    /* Добавляем кастомную обводку при фокусе */
+}
+
+select option:hover {
+    background-color: var(--second);
+    /* Цвет при наведении на опцию */
+}
+
+.decor-angle {
+    position: relative;
+}
+
+.decor-angle::before,
+.decor-angle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background-image: url("../img/decor/nine-palace-horn-top.png");
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+}
+
+.decor-angle::before {
+    top: -23px;
+    left: -19px;
+}
+
+.decor-angle::after {
+    bottom: -23px;
+    right: -19px;
+    transform: rotate(180deg);
+}
+
+.decor-nav {
+    background-image: url("../img/decor/nav-bg.jpg");
+    background-size: auto 100%;
+}
+
+
+.decor-curb {
+    background-image: url("../img/decor/broder-top-repeat.jpg");
+    background-size: auto 100%;
+}
+
+.decor-gold {
+    background: url("../img/decor/text-bg.jpg") repeat-x;
+    background-size: auto 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .8)) brightness(1.2);
+}
+
+.decor-particle {
+    position: relative;
+}
+
+.decor-particle::before,
+.decor-particle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: url("../img/decor/icon-play-shine.png");
+    background-size: auto 100%;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .8)) brightness(1.2);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.decor-particle::before {
+    animation-name: rotate-scale-before;
+    animation-duration: 21s;
+}
+
+.decor-particle::after {
+    animation-name: rotate-scale-after;
+    animation-duration: 13s;
+}
+
+@keyframes rotate-scale-before {
+    0% {
+        transform: rotate(-10deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(10deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(-10deg) scale(1);
+    }
+}
+
+@keyframes rotate-scale-after {
+    0% {
+        transform: rotate(190deg) scale(1.2);
+    }
+
+    50% {
+        transform: rotate(170deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(190deg) scale(1.2);
+    }
+}
+
+.decor-area {
+    /* border-r-8 back-color-dark border-solid-1 border-color-other */
+    border-radius: 8px;
+    background-color: var(--dark);
+    border: solid 1px var(--other);
+}
+
+.decor-btn {
+    padding: 0 21px;
+    height: 36px;
+    border-image-source: url("../img/frames/nav-btn.png");
+    border-image-slice: 20 fill;
+    border-image-width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 1s;
+    color: var(--contrast);
+}
+
+.decor-btn svg>* {
+    fill: var(--contrast);
+    transition: 1s;
+}
+
+.decor-btn:hover {
+    filter: brightness(1.5) saturate(2);
+    transition: .3s;
+    color: var(--accent);
+}
+
+.decor-btn:hover svg>* {
+    fill: var(--accent);
+}
+
+.decor-link {
+    cursor: pointer;
+    transition: 1s;
+    color: var(--contrast);
+    text-decoration: none;
+
+    transition: 1s;
+
+    /* background: url("../img/decor/text-bg.jpg") repeat-x;
+    background-size: auto 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.filter-shadow-corrupted{
+    filter: drop-shadow(0px 0px 10px var(--color-corrupted));
+}
+
+*:target{
+    animation: ping 1s ease-in-out infinite;
+}
+
+
+@keyframes ping {
+    0% {
+        filter: drop-shadow(0px 0px 0px rgba(255, 215, 85, 1));
+    }
+    /* 50% {
+        filter: drop-shadow(0px 0px 10px rgba(255, 215, 85, 1));
+    } */
+    100% {
+        filter: drop-shadow(0px 0px 13px rgba(255, 215, 85, 0));
+    }
+}
+
+.ping {
+}
+
+.decor-link:hover,
+.decor-link.active {
+    color: var(--accent);
+    filter: drop-shadow(0px 0px 10px rgb(255, 215, 85));
+    transition: .3s;
+}
+
+.decor-tag {
+    padding: 3px 13px;
+    border-image-source: url("../img/frames/tag.png");
+    border-image-slice: 14 fill;
+    border-image-width: 6px;
+    display: flex;
+    transition: filter 1s;
+    -webkit-text-fill-color: var(--accent);
+    color: var(--accent);
+}
+
+.decor-input {
+    padding: 5px 13px;
+    height: 36px;
+    width: 100%;
+    border-image-source: url("../img/frames/nine-palace-bg.png");
+    border-image-slice: 52 fill;
+    border-image-width: 10px;
+    display: flex;
+    transition: filter 1s;
+    -webkit-text-fill-color: var(--contrast);
+    color: var(--contrast);
+}
+
+.decor-input::placeholder {
+    color: var(--second);
+    -webkit-text-fill-color: var(--second);
+}
+
+.decor-textbox {
+    padding: 5px 13px;
+    width: 100%;
+    border-image-source: url("../img/frames/nine-palace-bg.png");
+    border-image-slice: 52 fill;
+    border-image-width: 10px;
+    display: flex;
+    transition: filter 1s, color 1s;
+}
+
+.decor-rarity,
+.decor-rarity-rare,
+.decor-rarity-normal,
+.decor-rarity-magic,
+.decor-rarity-unique,
+.decor-rarity-corrupted {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.decor-rarity-rare {
+    border: solid 1px var(--color-rare-item);
+}
+
+.decor-rarity-normal {
+    border: solid 1px var(--color-normal-item);
+}
+
+.decor-rarity-magic {
+    border: solid 1px var(--color-magic-item);
+}
+
+.decor-rarity-unique {
+    border: solid 1px var(--color-unique-item);
+}
+
+.decor-rarity-corrupted {
+    border: solid 1px var(--color-corrupted);
+}
+
+.stroke-color-success,
+.stroke-color-success path {
+    stroke: var(--success);
+}
+.stroke-color-warning,
+.stroke-color-warning path {
+    stroke: var(--warning);
+}
+.stroke-color-danger,
+.stroke-color-danger path {
+    stroke: var(--danger);
+}
+.stroke-color-accent,
+.stroke-color-accent path {
+    stroke: var(--accent);
+}
+.stroke-color-contrast,
+.stroke-color-contrast path {
+    stroke: var(--contrast);
+}
+
+.decor-frame,
+.decor-frame-hover,
+.decor-papper,
+.decor-papper-hover {
+    display: block;
+    border-image-source: url("../img/frames/nine-palace-bg.png");
+    border-image-slice: 52 fill;
+    border-image-width: 10px;
+    transition: filter 1s, color 1s;
+}
+
+.decor-frame-hover:hover,
+.decor-papper-hover:hover {
+    filter: brightness(1.3);
+    transition: filter .3s, color .3s;
+    color: var(--accent);
+}
+
+.decor-papper,
+.decor-papper-hover {
+    border-image-source: url("../img/frames/shop_item_bg.png");
+    border-image-slice: 10 fill;
+    border-image-width: 14px;
+    transition: border-image-source 1s;
+    /* background: #00000050; */
+    /* backdrop-filter: blur(10px); */
+}
+.decor-papper:hover {
+    border-image-source: url("../img/frames/shop_bundle_bg.png");
+    transition: border-image-source .3s;
+}
+
+.decor-checkbox,
+.decor-checkbox-invert {
+    height: 24px;
+    min-width: 24px;
+    position: relative;
+    /* padding: 5px 13px; */
+    border-image-source: url("../img/frames/nine-palace-bg.png");
+    border-image-slice: 52 fill;
+    border-image-width: 10px;
+    display: flex;
+    transition: filter 1s, color 1s;
+    cursor: pointer;
+}
+
+.decor-input:hover,
+.decor-input:focus,
+.decor-input:active,
+.decor-textbox:hover,
+.decor-textbox:focus,
+.decor-textbox:active,
+.decor-checkbox:hover,
+.decor-checkbox:checked,
+.decor-checkbox-invert,
+.decor-checkbox-invert:checked:hover {
+    filter: brightness(1.5) saturate(2);
+    transition: filter .3s, color .3s;
+    color: var(--accent);
+}
+
+.decor-checkbox-invert:checked {
+    transition: filter 1s, color 1s;
+    filter: none;
+    color: inherit;
+}
+
+.decor-checkbox::after,
+.decor-checkbox-invert::after {
+    position: absolute;
+    content: 'V';
+    font-size: 14px;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    /* transform: translate(-50%, -50%) rotate(45deg) scaleX(-1); */
+    transform: translate(-50%, -50%);
+    transition: opacity .3s;
+}
+
+.decor-checkbox[type="radio"]::after {
+    content: 'O';
+}
+
+.decor-checkbox:checked::after {
+    opacity: 1;
+}
+
+.decor-checkbox-invert::after {
+    opacity: 1;
+}
+
+.decor-checkbox-invert:checked::after {
+    opacity: 0;
+}
+
+.decor-back-dark::before,
+.decor-back-grad::before,
+.decor-basic-grad::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.decor-back-dark::before {
+    background-color: var(--dark);
+    opacity: .9;
+}
+
+.decor-back-grad::before {
+    background: linear-gradient(to right, var(--dark) 50%, transparent 150%);
+}
+
+.decor-basic-grad::before {
+    background: linear-gradient(to right, var(--basic) 50%, transparent 150%);
+}
+
+.decor-icon {
+    width: 100px;
+    height: 100px;
+    background: url("../img/decor/icon-runes-bg.png");
+    background-size: 100% 100%;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--second);
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.decor-icon:hover {
+    width: 100px;
+    height: 100px;
+    background: url("../img/decor/icon-runes-current-bg.png");
+    background-size: 100% 100%;
+    color: var(--accent);
+    transition: .3s;
+}
+
+.levitate {
+    animation: levitation 5s ease-in-out infinite;
+}
+
+.levitate:nth-child(1n) {
+    animation-delay: 0s;
+}
+
+.levitate:nth-child(2n) {
+    animation-delay: 1s;
+}
+
+.levitate:nth-child(3n) {
+    animation-delay: 2s;
+}
+
+@keyframes levitation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+.decor-section-top,
+.decor-section-bot {
+    position: relative;
+}
+
+.decor-section-top::before,
+.decor-section-bot::after {
+    pointer-events: none;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/decor/feature-bottom-border.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.decor-section-top::before {
+    top: 0px;
+}
+
+.decor-section-bot::before {
+    bottom: 0px;
+    transform: scaleX(-1);
+
+}
+
+.decor-gold-red {
+    filter: hue-rotate(-50deg) contrast(150%);
+}
+
+.veiled {
+    filter: sepia(100%) brightness(50%);
+}
+
+.discord-frame {
+    width: 100%;
+    height: 350px;
+    filter: sepia(100%) brightness(50%);
+}
+
+.filter-bright {
+    filter: brightness(50%);
+}
+
+.code {
+    white-space: pre-wrap;
+    /* Перенос длинных строк */
+    word-wrap: break-word;
+    /* Перенос слов */
+    font-family: revert;
+}
+
+
+/* .style-h1,
+.style-h2,
+.style-h3{
+    background: url("../img/decor/text-bg.jpg") repeat-x;
+    background-size: auto 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .8)) brightness(1.2);
+}
+.style-h1{
+    font-size: 36px;
+}
+.style-h2{
+    font-size: 30px;
+}
+.style-h3{
+    font-size: 24px;
+}
+.style-btn{
+    font-size: 24px;
+} */
+
+/* Основные стили для input file */
+input[type="file"] {
+    display: block;
+    cursor: pointer;
+}
+
+/* Скрываем стандартный текст в input */
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    /* Убирает стандартный стиль браузера */
+    width: 100%;
+    /* Ширина элемента */
+    height: 1px;
+    /* Высота полосы */
+    background: var(--second);
+    /* Цвет фона полосы */
+    border-radius: 5px;
+    /* Закругленные углы полосы */
+    outline: none;
+    /* Убирает обводку при фокусе */
+    transition: background 1s;
+    /* Плавное изменение цвета фона */
+}
+
+input[type="range"]:hover {
+    background: var(--contrast);
+    /* Цвет полосы при наведении */
+    transition: background .3s;
+    /* Плавное изменение цвета фона */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 24px;
+    border-image-source: url("../img/frames/nine-palace-bg.png");
+    border-image-slice: 31 fill;
+    border-image-width: 10px;
+    cursor: pointer;
+    transition: filter 1s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    filter: brightness(1.5) saturate(2);
+    transition: filter .3s;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 24px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #45a049;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-ms-thumb:hover {
+    background: rgb(5, 5, 5, 100);
+    background-color: #000000cc;
+}
+
+.poe-icon {
+    position: relative;
+}
+
+.poe-icon::after {
+    position: absolute;
+    transform: translate(50%, -50%) scale(0.3);
+    top: 0;
+    right: 0;
+    content: '';
+    width: 64px;
+    height: 64px;
+    background-image: url('../img/icon/player.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.example {
+    cursor: default;
+    transform: scale(1);
+    /* filter: brightness(100%); */
+    transition: transform 1s;
+}
+
+.example:hover {
+    transform: scale(1.1);
+    /* filter: brightness(80%); */
+    transition: transform .3s;
+}
+
+.decor-false {
+    position: relative;
+}
+
+.decor-false::before {
+    content: attr(data-counter) 'X';
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.8);
+    color: red;
+    z-index: 10;
+    text-shadow:
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px 2px 0 black,
+        2px 2px 0 black;
+}
+
+.decor-counter {
+    position: relative;
+}
+
+.decor-counter::before {
+    content: attr(data-counter);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.8);
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    text-shadow:
+
+        -1px 0px 0 black,
+        1px 0px 0 black,
+        0px 1px 0 black,
+        0px -1px 0 black,
+
+        -2px 0px 0 black,
+        2px 0px 0 black,
+        0px 2px 0 black,
+        0px -2px 0 black,
+
+        -3px 0px 0 black,
+        3px 0px 0 black,
+        0px 3px 0 black,
+        0px -3px 0 black;
+}
+
+.popup-container {
+    position: relative;
+}
+
+.popup-content {
+    min-width: 400px;
+    max-width: 800px;
+    display: none;
+    position: absolute;
+    pointer-events: none;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 13px;
+    transform: translateX(-50%);
+}
+
+.popup-container:hover {
+    z-index: 100;
+}
+
+.popup-container:hover .popup-content {
+    display: block;
+    z-index: 0;
+}
+
+.decor-socket,
+.decor-socket-R,
+.decor-socket-G,
+.decor-socket-B,
+.decor-socket-W,
+.decor-socket-A,
+.decor-socket-D {
+    width: 4px;
+    height: 4px;
+}
+
+.decor-socket-С {
+    fill: rgb(202, 13, 50);
+    animation: colorTransition 3s infinite;
+}
+
+@keyframes colorTransition {
+    0% {
+        fill: rgb(202, 13, 50);
+    }
+
+    25% {
+        fill: rgb(158, 203, 13);
+    }
+
+    50% {
+        fill: rgb(88, 130, 254);
+    }
+
+    75% {
+        fill: rgb(200, 200, 200);
+    }
+
+    100% {
+        fill: rgb(202, 13, 50);
+    }
+}
+
+.decor-socket-R {
+    fill: rgb(202, 13, 50);
+}
+
+.decor-socket-G {
+    fill: rgb(158, 203, 13);
+}
+
+.decor-socket-B {
+    fill: rgb(88, 130, 254);
+}
+
+.decor-socket-W {
+    fill: rgb(200, 200, 200);
+}
+
+.decor-socket-A {
+    fill: rgb(59, 59, 59);
+}
+
+.decor-socket-D {
+    fill: rgb(249, 149, 13);
+}
+.decor-level{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-width: 23px;
+    min-height: 23px;
+    max-width: 23px;
+    max-height: 23px;
+    color: var(--accent);
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    background-image: url("../img/icon/level.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* .decor-level::before {
+    z-index: -10;
+    height: 150%;
+    width: 150%;
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url("../img/effects/46.png");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+.decor-progress{
+    min-height: 10px;
+    height: 100%;
+    background: url("../img/decor/progress-bar.png");
+    background-size: 200% 100%;
+    border-right: 1px solid var(--accent);
+}
+.itemlevel{
+    position: relative;
+}
+
+.itemlevel::after{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    content: attr(data-counter);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.decor-icon-sidebar {
+    width: 64px;
+    height: 64px;
+    background: url("../img/decor/icon-runes-bg.png");
+    background-size: 100% 100%;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--second);
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.decor-icon-sidebar:hover {
+    background: url("../img/decor/icon-runes-current-bg.png");
+    background-size: 100% 100%;
+    color: var(--accent);
+    transition: .3s;
+}
+
+.scroll-portal {
+    position: relative;
+}
+
+.scroll-portal::before {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: url("../img/icon/CurrencyPortal.png");
+    transition: background 1s;
+    background-size: 100% 100%;
+}
+
+.scroll-portal:hover::before {
+    background: url("../img/influences/Portal.png");
+    transition: background .3s;
+    background-size: 100% 100%;
+}
+
+.scroll-wisdom {
+    position: relative;
+}
+
+.scroll-wisdom::before {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: url("../img/icon/CurrencyIdentification.png");
+    transition: background 1s;
+    background-size: 100% 100%;
+}
+
+.scroll-wisdom:hover::before {
+    background: url("../img/icon/Information.png");
+    transition: background .3s;
+    background-size: 100% 100%;
+}
+
+/* Circle */
+
+.poe-icon-Circle-Blue::after {
+    background-position: calc(64px * -5) calc(64px * -3);
+}
+
+.poe-icon-Circle-Green::after {
+    background-position: calc(64px * -8) calc(64px * -3);
+}
+
+.poe-icon-Circle-Brown::after {
+    background-position: calc(64px * -10) calc(64px * -3);
+}
+
+.poe-icon-Circle-Red::after {
+    background-position: calc(64px * -13) calc(64px * -3);
+}
+
+.poe-icon-Circle-White::after {
+    background-position: calc(64px * -2) calc(64px * -4);
+}
+
+.poe-icon-Circle-Yellow::after {
+    background-position: calc(64px * -5) calc(64px * -4);
+}
+
+.poe-icon-Circle-Cyan::after {
+    background-position: calc(64px * -2) calc(64px * -15);
+}
+
+.poe-icon-Circle-Grey::after {
+    background-position: calc(64px * -5) calc(64px * -15);
+}
+
+.poe-icon-Circle-Orange::after {
+    background-position: calc(64px * -8) calc(64px * -15);
+}
+
+.poe-icon-Circle-Pink::after {
+    background-position: calc(64px * -11) calc(64px * -15);
+}
+
+.poe-icon-Circle-Purple::after {
+    background-position: calc(64px * 0) calc(64px * -16);
+}
+
+/* Diamond */
+
+.poe-icon-Diamond-Blue::after {
+    background-position: calc(64px * -8) calc(64px * -4);
+}
+
+.poe-icon-Diamond-Green::after {
+    background-position: calc(64px * -11) calc(64px * -4);
+}
+
+.poe-icon-Diamond-Brown::after {
+    background-position: calc(64px * 0) calc(64px * -5);
+}
+
+.poe-icon-Diamond-Red::after {
+    background-position: calc(64px * -3) calc(64px * -5);
+}
+
+.poe-icon-Diamond-White::after {
+    background-position: calc(64px * -6) calc(64px * -5);
+}
+
+.poe-icon-Diamond-Yellow::after {
+    background-position: calc(64px * -9) calc(64px * -5);
+}
+
+.poe-icon-Diamond-Cyan::after {
+    background-position: calc(64px * -3) calc(64px * -16);
+}
+
+.poe-icon-Diamond-Grey::after {
+    background-position: calc(64px * -6) calc(64px * -16);
+}
+
+.poe-icon-Diamond-Orange::after {
+    background-position: calc(64px * -9) calc(64px * -16);
+}
+
+.poe-icon-Diamond-Pink::after {
+    background-position: calc(64px * -12) calc(64px * -16);
+}
+
+.poe-icon-Diamond-Purple::after {
+    background-position: calc(64px * -1) calc(64px * -17);
+}
+
+/* Hexagon */
+
+.poe-icon-Hexagon-Blue::after {
+    background-position: calc(64px * -12) calc(64px * -5);
+}
+
+.poe-icon-Hexagon-Green::after {
+    background-position: calc(64px * -1) calc(64px * -6);
+}
+
+.poe-icon-Hexagon-Brown::after {
+    background-position: calc(64px * -4) calc(64px * -6);
+}
+
+.poe-icon-Hexagon-Red::after {
+    background-position: calc(64px * -7) calc(64px * -6);
+}
+
+.poe-icon-Hexagon-White::after {
+    background-position: calc(64px * -10) calc(64px * -6);
+}
+
+.poe-icon-Hexagon-Yellow::after {
+    background-position: calc(64px * -13) calc(64px * -6);
+}
+
+.poe-icon-Hexagon-Cyan::after {
+    background-position: calc(64px * -4) calc(64px * -17);
+}
+
+.poe-icon-Hexagon-Grey::after {
+    background-position: calc(64px * -5) calc(64px * -17);
+}
+
+.poe-icon-Hexagon-Orange::after {
+    background-position: calc(64px * -10) calc(64px * -17);
+}
+
+.poe-icon-Hexagon-Pink::after {
+    background-position: calc(64px * -13) calc(64px * -17);
+}
+
+.poe-icon-Hexagon-Purple::after {
+    background-position: calc(64px * -2) calc(64px * -18);
+}
+
+/* Square */
+
+.poe-icon-Square-Blue::after {
+    background-position: calc(64px * -2) calc(64px * -7);
+}
+
+.poe-icon-Square-Green::after {
+    background-position: calc(64px * -5) calc(64px * -7);
+}
+
+.poe-icon-Square-Brown::after {
+    background-position: calc(64px * -8) calc(64px * -7);
+}
+
+.poe-icon-Square-Red::after {
+    background-position: calc(64px * -11) calc(64px * -7);
+}
+
+.poe-icon-Square-White::after {
+    background-position: calc(64px * 0) calc(64px * -7);
+}
+
+.poe-icon-Square-Yellow::after {
+    background-position: calc(64px * -3) calc(64px * -8);
+}
+
+.poe-icon-Square-Cyan::after {
+    background-position: calc(64px * -5) calc(64px * -18);
+}
+
+.poe-icon-Square-Grey::after {
+    background-position: calc(64px * -8) calc(64px * -18);
+}
+
+.poe-icon-Square-Orange::after {
+    background-position: calc(64px * -11) calc(64px * -18);
+}
+
+.poe-icon-Square-Pink::after {
+    background-position: calc(64px * 0) calc(64px * -19);
+}
+
+.poe-icon-Square-Purple::after {
+    background-position: calc(64px * -3) calc(64px * -19);
+}
+
+/* Star */
+
+.poe-icon-Star-Blue::after {
+    background-position: calc(64px * -6) calc(64px * -8);
+}
+
+.poe-icon-Star-Green::after {
+    background-position: calc(64px * -9) calc(64px * -8);
+}
+
+.poe-icon-Star-Brown::after {
+    background-position: calc(64px * -12) calc(64px * -8);
+}
+
+.poe-icon-Star-Red::after {
+    background-position: calc(64px * -1) calc(64px * -9);
+}
+
+.poe-icon-Star-White::after {
+    background-position: calc(64px * -4) calc(64px * -9);
+}
+
+.poe-icon-Star-Yellow::after {
+    background-position: calc(64px * -7) calc(64px * -9);
+}
+
+.poe-icon-Star-Cyan::after {
+    background-position: calc(64px * -6) calc(64px * -19);
+}
+
+.poe-icon-Star-Grey::after {
+    background-position: calc(64px * -9) calc(64px * -19);
+}
+
+.poe-icon-Star-Orange::after {
+    background-position: calc(64px * -12) calc(64px * -19);
+}
+
+.poe-icon-Star-Pink::after {
+    background-position: calc(64px * -1) calc(64px * -20);
+}
+
+.poe-icon-Star-Purple::after {
+    background-position: calc(64px * -4) calc(64px * -20);
+}
+
+/* Triangle */
+
+.poe-icon-Triangle-Blue::after {
+    background-position: calc(64px * -10) calc(64px * -9);
+}
+
+.poe-icon-Triangle-Green::after {
+    background-position: calc(64px * -13) calc(64px * -9);
+}
+
+.poe-icon-Triangle-Brown::after {
+    background-position: calc(64px * -2) calc(64px * -10);
+}
+
+.poe-icon-Triangle-Red::after {
+    background-position: calc(64px * -5) calc(64px * -10);
+}
+
+.poe-icon-Triangle-White::after {
+    background-position: calc(64px * -8) calc(64px * -10);
+}
+
+.poe-icon-Triangle-Yellow::after {
+    background-position: calc(64px * -11) calc(64px * -10);
+}
+
+.poe-icon-Triangle-Cyan::after {
+    background-position: calc(64px * -7) calc(64px * -20);
+}
+
+.poe-icon-Triangle-Grey::after {
+    background-position: calc(64px * -10) calc(64px * -20);
+}
+
+.poe-icon-Triangle-Orange::after {
+    background-position: calc(64px * -13) calc(64px * -20);
+}
+
+.poe-icon-Triangle-Pink::after {
+    background-position: calc(64px * -2) calc(64px * -21);
+}
+
+.poe-icon-Triangle-Purple::after {
+    background-position: calc(64px * -5) calc(64px * -21);
+}
+
+/* Cross */
+
+.poe-icon-Cross-Blue::after {
+    background-position: calc(64px * -8) calc(64px * -21);
+}
+
+.poe-icon-Cross-Green::after {
+    background-position: calc(64px * -11) calc(64px * -21);
+}
+
+.poe-icon-Cross-Brown::after {
+    background-position: calc(64px * 0) calc(64px * -22);
+}
+
+.poe-icon-Cross-Red::after {
+    background-position: calc(64px * -3) calc(64px * -22);
+}
+
+.poe-icon-Cross-White::after {
+    background-position: calc(64px * -6) calc(64px * -22);
+}
+
+.poe-icon-Cross-Yellow::after {
+    background-position: calc(64px * -9) calc(64px * -22);
+}
+
+.poe-icon-Cross-Cyan::after {
+    background-position: calc(64px * -12) calc(64px * -22);
+}
+
+.poe-icon-Cross-Grey::after {
+    background-position: calc(64px * -1) calc(64px * -23);
+}
+
+.poe-icon-Cross-Orange::after {
+    background-position: calc(64px * -4) calc(64px * -23);
+}
+
+.poe-icon-Cross-Pink::after {
+    background-position: calc(64px * -7) calc(64px * -23);
+}
+
+.poe-icon-Cross-Purple::after {
+    background-position: calc(64px * -10) calc(64px * -23);
+}
+
+/* Moon */
+
+.poe-icon-Moon-Blue::after {
+    background-position: calc(64px * -13) calc(64px * -23);
+}
+
+.poe-icon-Moon-Green::after {
+    background-position: calc(64px * -2) calc(64px * -24);
+}
+
+.poe-icon-Moon-Brown::after {
+    background-position: calc(64px * -5) calc(64px * -24);
+}
+
+.poe-icon-Moon-Red::after {
+    background-position: calc(64px * -8) calc(64px * -24);
+}
+
+.poe-icon-Moon-White::after {
+    background-position: calc(64px * -11) calc(64px * -24);
+}
+
+.poe-icon-Moon-Yellow::after {
+    background-position: calc(64px * 0) calc(64px * -25);
+}
+
+.poe-icon-Moon-Cyan::after {
+    background-position: calc(64px * -3) calc(64px * -25);
+}
+
+.poe-icon-Moon-Grey::after {
+    background-position: calc(64px * -6) calc(64px * -25);
+}
+
+.poe-icon-Moon-Orange::after {
+    background-position: calc(64px * -9) calc(64px * -25);
+}
+
+.poe-icon-Moon-Pink::after {
+    background-position: calc(64px * -12) calc(64px * -25);
+}
+
+.poe-icon-Moon-Purple::after {
+    background-position: calc(64px * -1) calc(64px * -26);
+}
+
+/* Raindrop */
+
+.poe-icon-Raindrop-Blue::after {
+    background-position: calc(64px * -4) calc(64px * -26);
+}
+
+.poe-icon-Raindrop-Green::after {
+    background-position: calc(64px * -7) calc(64px * -26);
+}
+
+.poe-icon-Raindrop-Brown::after {
+    background-position: calc(64px * -10) calc(64px * -26);
+}
+
+.poe-icon-Raindrop-Red::after {
+    background-position: calc(64px * -13) calc(64px * -26);
+}
+
+.poe-icon-Raindrop-White::after {
+    background-position: calc(64px * -2) calc(64px * -27);
+}
+
+.poe-icon-Raindrop-Yellow::after {
+    background-position: calc(64px * -5) calc(64px * -27);
+}
+
+.poe-icon-Raindrop-Cyan::after {
+    background-position: calc(64px * -8) calc(64px * -27);
+}
+
+.poe-icon-Raindrop-Grey::after {
+    background-position: calc(64px * -11) calc(64px * -27);
+}
+
+.poe-icon-Raindrop-Orange::after {
+    background-position: calc(64px * 0) calc(64px * -28);
+}
+
+.poe-icon-Raindrop-Pink::after {
+    background-position: calc(64px * -3) calc(64px * -28);
+}
+
+.poe-icon-Raindrop-Purple::after {
+    background-position: calc(64px * -6) calc(64px * -28);
+}
+
+/* Kite */
+
+.poe-icon-Kite-Blue::after {
+    background-position: calc(64px * -9) calc(64px * -28);
+}
+
+.poe-icon-Kite-Green::after {
+    background-position: calc(64px * -12) calc(64px * -28);
+}
+
+.poe-icon-Kite-Brown::after {
+    background-position: calc(64px * -1) calc(64px * -29);
+}
+
+.poe-icon-Kite-Red::after {
+    background-position: calc(64px * -4) calc(64px * -29);
+}
+
+.poe-icon-Kite-White::after {
+    background-position: calc(64px * -7) calc(64px * -29);
+}
+
+.poe-icon-Kite-Yellow::after {
+    background-position: calc(64px * -10) calc(64px * -29);
+}
+
+.poe-icon-Kite-Cyan::after {
+    background-position: calc(64px * -13) calc(64px * -29);
+}
+
+.poe-icon-Kite-Grey::after {
+    background-position: calc(64px * -2) calc(64px * -30);
+}
+
+.poe-icon-Kite-Orange::after {
+    background-position: calc(64px * -5) calc(64px * -30);
+}
+
+.poe-icon-Kite-Pink::after {
+    background-position: calc(64px * -8) calc(64px * -30);
+}
+
+.poe-icon-Kite-Purple::after {
+    background-position: calc(64px * -11) calc(64px * -30);
+}
+
+/* Pentagon */
+
+.poe-icon-Pentagon-Blue::after {
+    background-position: calc(64px * 0) calc(64px * -31);
+}
+
+.poe-icon-Pentagon-Green::after {
+    background-position: calc(64px * -3) calc(64px * -31);
+}
+
+.poe-icon-Pentagon-Brown::after {
+    background-position: calc(64px * -6) calc(64px * -31);
+}
+
+.poe-icon-Pentagon-Red::after {
+    background-position: calc(64px * -9) calc(64px * -31);
+}
+
+.poe-icon-Pentagon-White::after {
+    background-position: calc(64px * -12) calc(64px * -31);
+}
+
+.poe-icon-Pentagon-Yellow::after {
+    background-position: calc(64px * -1) calc(64px * -32);
+}
+
+.poe-icon-Pentagon-Cyan::after {
+    background-position: calc(64px * -4) calc(64px * -32);
+}
+
+.poe-icon-Pentagon-Grey::after {
+    background-position: calc(64px * -7) calc(64px * -32);
+}
+
+.poe-icon-Pentagon-Orange::after {
+    background-position: calc(64px * -10) calc(64px * -32);
+}
+
+.poe-icon-Pentagon-Pink::after {
+    background-position: calc(64px * -13) calc(64px * -32);
+}
+
+.poe-icon-Pentagon-Purple::after {
+    background-position: calc(64px * -2) calc(64px * -33);
+}
+
+/* UpsideDownHouse */
+
+.poe-icon-UpsideDownHouse-Blue::after {
+    background-position: calc(64px * -5) calc(64px * -33);
+}
+
+.poe-icon-UpsideDownHouse-Green::after {
+    background-position: calc(64px * -8) calc(64px * -33);
+}
+
+.poe-icon-UpsideDownHouse-Brown::after {
+    background-position: calc(64px * -11) calc(64px * -33);
+}
+
+.poe-icon-UpsideDownHouse-Red::after {
+    background-position: calc(64px * 0) calc(64px * -34);
+}
+
+.poe-icon-UpsideDownHouse-White::after {
+    background-position: calc(64px * -3) calc(64px * -34);
+}
+
+.poe-icon-UpsideDownHouse-Yellow::after {
+    background-position: calc(64px * -6) calc(64px * -34);
+}
+
+.poe-icon-UpsideDownHouse-Cyan::after {
+    background-position: calc(64px * -9) calc(64px * -34);
+}
+
+.poe-icon-UpsideDownHouse-Grey::after {
+    background-position: calc(64px * -12) calc(64px * -34);
+}
+
+.poe-icon-UpsideDownHouse-Orange::after {
+    background-position: calc(64px * -1) calc(64px * -35);
+}
+
+.poe-icon-UpsideDownHouse-Pink::after {
+    background-position: calc(64px * -4) calc(64px * -35);
+}
+
+.poe-icon-UpsideDownHouse-Purple::after {
+    background-position: calc(64px * -7) calc(64px * -35);
+}
